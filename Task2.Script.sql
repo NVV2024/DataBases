@@ -37,7 +37,7 @@ CREATE TABLE track (
 CREATE TABLE collection (
       id SERIAL PRIMARY KEY, 
       Name VARCHAR(100), 
-      year DATE
+      Year INTEGER
   );
 
 CREATE TABLE CollectionTracks (
