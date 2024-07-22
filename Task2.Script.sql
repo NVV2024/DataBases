@@ -1,7 +1,6 @@
 CREATE TABLE musitian (
       id serial PRIMARY KEY, 
-      Name VARCHAR(100) unique
-  );
+      Name VARCHAR(100) unique);
 
 CREATE TABLE Style (
       id SERIAL PRIMARY KEY, 
