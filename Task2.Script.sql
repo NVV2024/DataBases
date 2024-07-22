@@ -11,7 +11,7 @@ CREATE TABLE Style (
 CREATE TABLE albom (
         id SERIAL PRIMARY KEY, 
         Name VARCHAR(100), 
-        Year DATA, 
+        Year INTEGER, 
         musitian_id NOT NULL REFERNCE musitian(id)
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE MusitianStyle (
 CREATE TABLE track (
         id SERIAL PRIMARY KEY, 
         Name VARCHAR(100), 
-        duration TIME, 
+        duration INTERVAL, 
         albom_id INTEGER NOT NULL REFERENCES albom(id)
   );
 
@@ -45,9 +45,3 @@ CREATE TABLE CollectionTracks (
         colection_id INTEGER NOT NULL REFERENCES collection(id), 
         track_id INTEGER NOT NULL REFERENCES track(id)
   );
-
-CREATE TABLE AlbomCollection (
-		id SERIAL PRIMARY key,
-		albom_id INTEGER NOT NULL REFERENCES albom(id),
-		collection_id INTEGER NOT NULL REFERENCES collection(id)
-);
